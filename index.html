@@ -91,7 +91,12 @@
     letter-spacing: 0.08em;
     color: var(--ink-2);
   }
-  .top-nav span{ cursor: default; }
+  .top-nav a{
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .top-nav a:hover{ color: var(--signal); }
 
   @media (max-width: 560px){
     .top-nav{ display: none; }
@@ -443,9 +448,9 @@
   <div class="wrap">
     <div class="brand">stream<span>notes</span></div>
     <nav class="top-nav">
-      <span>Rankings</span>
-      <span>Table</span>
-      <span>FAQ</span>
+      <a href="#tivimate">Rankings</a>
+      <a href="#tableau">Table</a>
+      <a href="#faq">FAQ</a>
     </nav>
   </div>
 </header>
