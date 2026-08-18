@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Free IPTV Player Apps in 2026 | streamnotes</title>
+<meta name="description" content="A comparison of the best free IPTV player apps in 2026: TiviMate, IPTV Smarters Pro, UltraCast, XCIPTV, OTT Navigator, Perfect Player, VLC and GSE Smart IPTV.">
+<style>
+
+  :root{
+    --navy-950: #0b1220;
+    --navy-900: #0f1729;
+    --navy-800: #16213a;
+    --navy-700: #1e2c4a;
+    --navy-600: #2a3d63;
+    --line: #29385a;
+    --ink-0: #f4f6fb;
+    --ink-1: #c7d0e3;
+    --ink-2: #8b96b3;
+    --signal: #ff7a3d;
+    --signal-dim: #d9622c;
+    --signal-glow: rgba(255,122,61,0.18);
+
+    --font-display: 'Bebas Neue', 'Archivo Narrow', Impact, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+  }
+
+  *{ box-sizing: border-box; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--navy-950);
+    background-image:
+      radial-gradient(ellipse 900px 500px at 15% -5%, rgba(255,122,61,0.08), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 10%, rgba(255,122,61,0.05), transparent 55%);
+    color: var(--ink-1);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  a{ color: inherit; }
+
+  /* ---------- TOP BAR ---------- */
+
+  header.top{
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(11,18,32,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  header.top .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .brand{
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+    font-size: 22px;
+    color: var(--ink-0);
+    text-transform: uppercase;
+  }
+  .brand span{ color: var(--signal); }
+
+  .top-nav{
+    display: flex;
+    gap: 22px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-2);
+  }
+  .top-nav span{ cursor: default; }
+
+  @media (max-width: 560px){
+    .top-nav{ display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .kicker{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin: 0 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .kicker::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 3px var(--signal-glow);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse{
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  h1{
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.02;
+    color: var(--ink-0);
+    margin: 0 0 22px;
+  }
+
+  .lede{
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-1);
+    max-width: 62ch;
+    margin: 0 0 20px;
+  }
+
+  .meta-line{
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--ink-2);
+    border-left: 2px solid var(--navy-600);
+    padding-left: 12px;
+    max-width: 62ch;
+  }
+
+  /* ---------- TOC ---------- */
+
+  .toc{
+    margin: 36px 0 0;
+    background: var(--navy-900);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+
+  .toc-title{
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin: 0 0 14px;
+  }
+
+  .toc ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+    counter-reset: toc;
+  }
+
+  .toc li{
+    counter-increment: toc;
+    font-size: 14.5px;
+    color: var(--ink-1);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .toc li::before{
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--signal-dim);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 560px){
+    .toc ol{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- INTRO ---------- */
+
+  .intro{
+    padding: 40px 0 8px;
+  }
+  .intro p{
+    max-width: 68ch;
+    color: var(--ink-1);
+  }
+  .intro p + p{ margin-top: 16px; }
+
+  /* ---------- APP ENTRIES ---------- */
+
+  .app-entry{
+    padding: 44px 0;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    scroll-margin-top: 80px;
+  }
+
+  .app-head{
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .app-rank{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--navy-600);
+    background: var(--navy-800);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 3px 9px;
+    letter-spacing: 0.04em;
+  }
+
+  .app-head h2{
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    font-size: clamp(26px, 4vw, 34px);
+    color: var(--ink-0);
+    margin: 0;
+  }
+
+  .platform-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .platform-tags span{
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--ink-2);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 4px 11px;
+  }
+
+  .app-entry p{
+    max-width: 68ch;
+    color: var(--ink-1);
+  }
+  .app-entry p + p{ margin-top: 14px; }
+
+  .specs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 22px 0;
+    max-width: 68ch;
+  }
+
+  .spec-box{
+    background: var(--navy-900);
+    padding: 14px 16px;
+  }
+
+  .spec-label{
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 6px;
+  }
+
+  .spec-value{
+    font-size: 13.5px;
+    color: var(--ink-0);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 560px){
+    .specs{ grid-template-columns: 1fr; }
+  }
+
+  .verdict{
+    margin-top: 18px;
+    padding-left: 14px;
+    border-left: 2px solid var(--signal-dim);
+    font-style: normal;
+    color: var(--ink-0);
+    font-size: 15px;
+  }
+
+  /* ---------- COMPARE TABLE ---------- */
+
+  table.compare{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 44px 0;
+    font-size: 14px;
+  }
+
+  table.compare caption{
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 14px;
+  }
+
+  table.compare thead th{
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+
+  table.compare tbody td{
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--navy-700);
+    color: var(--ink-1);
+    vertical-align: top;
+  }
+
+  table.compare tbody tr:first-child td{
+    color: var(--ink-0);
+  }
+
+  .compare-scroll{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: 640px){
+    table.compare{ font-size: 13px; min-width: 560px; }
+  }
+
+  /* ---------- FAQ ---------- */
+
+  .faq{
+    padding: 44px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .faq h2{
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(24px, 4vw, 30px);
+    color: var(--ink-0);
+    margin: 0 0 26px;
+  }
+
+  .faq-item{
+    padding: 18px 0;
+    border-bottom: 1px solid var(--navy-700);
+  }
+  .faq-item:first-of-type{ border-top: 1px solid var(--navy-700); }
+
+  .faq-item h3{
+    font-size: 15.5px;
+    color: var(--ink-0);
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+
+  .faq-item p{
+    margin: 0;
+    max-width: 66ch;
+    font-size: 14.5px;
+    color: var(--ink-2);
+  }
+
+  /* ---------- CLOSING ---------- */
+
+  .closing{
+    padding: 40px 0 60px;
+  }
+  .closing p{ max-width: 66ch; color: var(--ink-1); }
+  .closing p + p{ margin-top: 14px; }
+
+  /* ---------- FOOTER ---------- */
+
+  footer{
+    border-top: 1px solid var(--line);
+    background: var(--navy-900);
+  }
+  footer .wrap{ padding: 28px 24px 40px; }
+  footer p{
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--ink-2);
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+  footer p + p{ margin-top: 8px; }
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">stream<span>notes</span></div>
+    <nav class="top-nav">
+      <span>Rankings</span>
+      <span>Table</span>
+      <span>FAQ</span>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <p class="kicker">App comparison</p>
+    <h1>The Best Free IPTV Player Apps in 2026</h1>
+    <p class="lede">We reviewed the most widely used IPTV players this year, focusing on what actually matters day to day: channel switching speed, EPG quality, Chromecast support, and how each app renders on Android TV.</p>
+    <p class="meta-line">Updated August 2026. None of the apps listed here provide channels or playlists. These are players only, you bring your own M3U or Xtream Codes sources.</p>
+  </div>
+
+  <div class="toc">
+    <p class="toc-title">In this article</p>
+    <ol>
+      <li>TiviMate</li>
+      <li>IPTV Smarters Pro</li>
+      <li>UltraCast IPTV Player</li>
+      <li>OTT Navigator</li>
+      <li>XCIPTV</li>
+      <li>Perfect Player</li>
+      <li>VLC</li>
+      <li>GSE Smart IPTV</li>
+      <li>Comparison table</li>
+      <li>FAQ</li>
+    </ol>
+  </div>
+
+  <section class="intro">
+    <p>An IPTV player is just an interface between your subscription and your screen. It doesn't stream anything by itself, it plays whatever you feed it, whether that's an M3U playlist or Xtream Codes credentials from your provider. The difference between a good and a bad player comes down to details you only notice with regular use: how fast you can switch channels, how reliable the program guide is, how the app behaves in the background, and how well it handles Chromecast.</p>
+    <p>This comparison covers eight apps tested over several weeks, mainly on Android mobile and Android TV, with a few notes on iOS where relevant. No strict ranking order is implied, each app fits a different use case.</p>
+  </section>
+
+  <div class="app-entry" id="tivimate">
+    <div class="app-head">
+      <span class="app-rank">01</span>
+      <h2>TiviMate</h2>
+    </div>
+    <div class="platform-tags">
+      <span>Android TV</span>
+      <span>Fire Stick</span>
+      <span>Android mobile</span>
+    </div>
+    <p>Still the reference on TV. The cable box style interface and remote control navigation are hard to match, with a grid style program guide that loads fast and stays readable even with several hundred channels.</p>
+    <p>The free version covers basic use with a single playlist. Scheduled recording, multiple playlists, and some advanced options require the Premium version, priced around 5 to 6 dollars a year. The app isn't distributed on the Play Store for Android TV, it needs to be sideloaded.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free, Premium optional</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">Full grid, fast loading</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">Sideload on Fire Stick</div>
+      </div>
+    </div>
+    <p class="verdict">A solid choice if you mostly watch on TV and never touch a smartphone for it.</p>
+  </div>
+
+  <div class="app-entry" id="smarters">
+    <div class="app-head">
+      <span class="app-rank">02</span>
+      <h2>IPTV Smarters Pro</h2>
+    </div>
+    <div class="platform-tags">
+      <span>Android</span>
+      <span>iOS</span>
+      <span>Windows</span>
+      <span>Android TV</span>
+    </div>
+    <p>The widest device coverage on the market. The same account works on phone, tablet, PC, and TV, making it the default pick for anyone switching between several screens.</p>
+    <p>The setup wizard is simple, you paste your Xtream Codes credentials or M3U URL and it works within a few minutes. The interface is a bit less polished than TiviMate on remote controls, but it's entirely free with no hidden paywall.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">Decent, less smooth</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">Official store everywhere</div>
+      </div>
+    </div>
+    <p class="verdict">The most versatile option if you want one app across every device without paying anything.</p>
+  </div>
+
+  <div class="app-entry" id="ultracast">
+    <div class="app-head">
+      <span class="app-rank">03</span>
+      <h2>UltraCast IPTV Player</h2>
+    </div>
+    <div class="platform-tags">
+      <span>Android</span>
+      <span>Android TV</span>
+      <span>Native Chromecast</span>
+    </div>
+    <p>A newer app than most names on this list, built around multi screen viewing and Chromecast. Multiview lets you display several streams at once on the same page, useful on days with multiple games running in parallel.</p>
+    <p>Switching between phone and TV through Chromecast happens without reconfiguring your playlist. The app detects whether it's running on mobile or Android TV and adapts its layout accordingly, rather than offering the same cramped layout on both.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free, Premium optional</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">XMLTV and Xtream combined</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Notable feature</div>
+        <div class="spec-value">Multiview up to 4 streams</div>
+      </div>
+    </div>
+    <p class="verdict">Worth considering if you regularly switch between phone and living room and want to follow multiple streams at once.</p>
+  </div>
+
+  <div class="app-entry" id="ottnavigator">
+    <div class="app-head">
+      <span class="app-rank">04</span>
+      <h2>OTT Navigator</h2>
+    </div>
+    <div class="platform-tags">
+      <span>Android</span>
+      <span>Android TV</span>
+      <span>Fire Stick</span>
+    </div>
+    <p>The app for people who like tuning every setting. Buffer, theme, display mode, channel sorting, almost everything is customizable, at the cost of a settings menu that can overwhelm a beginner. Multiview and Chromecast are included in the free version, which is rarer than it sounds in this category.</p>
+    <p>Initial setup takes longer than on Smarters or XCIPTV. Once configured, the app runs well even on older or less powerful Android TV hardware.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free, paid add ons</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">Advanced, highly configurable</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">Sideload on Android TV</div>
+      </div>
+    </div>
+    <p class="verdict">For users who want fine grained control and are fine with a longer setup process.</p>
+  </div>
+
+  <div class="app-entry" id="xciptv">
+    <div class="app-head">
+      <span class="app-rank">05</span>
+      <h2>XCIPTV</h2>
+    </div>
+    <div class="platform-tags">
+      <span>Android</span>
+      <span>Android TV</span>
+      <span>Fire Stick</span>
+    </div>
+    <p>One of the few apps on this list to include favorites, recording, and multi screen for free, where others reserve these features for a paid tier. The VOD interface, styled like a streaming catalog, is particularly polished. Its reputation also comes from handling very large playlists without slowing down, useful with providers that deliver M3U files with several thousand lines.</p>
+    <p>Like TiviMate, it isn't available on any official store for Android TV and requires a sideload.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">Decent, nothing special</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">Sideload required</div>
+      </div>
+    </div>
+    <p class="verdict">Solid if your playlist is large and you don't want to pay for recording.</p>
+  </div>
+
+  <div class="app-entry" id="perfectplayer">
+    <div class="app-head">
+      <span class="app-rank">06</span>
+      <h2>Perfect Player</h2>
+    </div>
+    <div class="platform-tags">
+      <span>Android</span>
+      <span>Android TV</span>
+    </div>
+    <p>The multilingual option of the bunch, with an interface available in six languages, which isn't common in this category. It supports M3U and Xtream Codes, offers a decent EPG, and runs cleanly even on fairly old Android devices. Available directly on the Play Store, unlike several better known competitors.</p>
+    <p>Manual channel sorting and custom category creation go further than what most free apps offer, at the cost of a visually less modern interface.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">Decent</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">Official store</div>
+      </div>
+    </div>
+    <p class="verdict">A good lightweight option, especially on older hardware, with real attention to customization.</p>
+  </div>
+
+  <div class="app-entry" id="vlc">
+    <div class="app-head">
+      <span class="app-rank">07</span>
+      <h2>VLC</h2>
+    </div>
+    <div class="platform-tags">
+      <span>All platforms</span>
+    </div>
+    <p>Not built for IPTV in the first place, but able to play any M3U stream pasted directly into the URL field. No dedicated interface, no EPG, no real playlist management to speak of. On the other hand it runs everywhere, never crashes, and works well for quickly checking whether a stream works before adding it to a proper IPTV app.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free, open source</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">None</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">Official store everywhere</div>
+      </div>
+    </div>
+    <p class="verdict">Handy as a fallback or for a quick test, not meant for daily use.</p>
+  </div>
+
+  <div class="app-entry" id="gse">
+    <div class="app-head">
+      <span class="app-rank">08</span>
+      <h2>GSE Smart IPTV</h2>
+    </div>
+    <div class="platform-tags">
+      <span>iOS</span>
+      <span>Apple TV</span>
+      <span>Android</span>
+    </div>
+    <p>The best option for the Apple ecosystem, where decent IPTV player choices remain limited. Native AirPlay support, with an interface designed for iOS rather than a straight port of an Android app. The EPG works well once configured, but initial setup is less intuitive than Smarters Pro.</p>
+    <div class="specs">
+      <div class="spec-box">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">Free, paid version available</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">EPG</div>
+        <div class="spec-value">Good once set up</div>
+      </div>
+      <div class="spec-box">
+        <div class="spec-label">Install</div>
+        <div class="spec-value">App Store</div>
+      </div>
+    </div>
+    <p class="verdict">The logical choice if you're on iPhone, iPad, or Apple TV and nothing else works properly.</p>
+  </div>
+
+  <div class="compare-scroll">
+  <table class="compare" id="tableau">
+    <caption>Quick comparison</caption>
+    <thead>
+      <tr>
+        <th>App</th>
+        <th>Platforms</th>
+        <th>Price</th>
+        <th>Strength</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TiviMate</td>
+        <td>Android TV, Fire Stick</td>
+        <td>Free / Premium</td>
+        <td>Remote control interface</td>
+      </tr>
+      <tr>
+        <td>IPTV Smarters Pro</td>
+        <td>Android, iOS, Windows</td>
+        <td>Free</td>
+        <td>Device coverage</td>
+      </tr>
+      <tr>
+        <td>UltraCast</td>
+        <td>Android, Android TV</td>
+        <td>Free / Premium</td>
+        <td>Multiview and Chromecast</td>
+      </tr>
+      <tr>
+        <td>OTT Navigator</td>
+        <td>Android, Android TV</td>
+        <td>Free</td>
+        <td>Advanced customization</td>
+      </tr>
+      <tr>
+        <td>XCIPTV</td>
+        <td>Android, Android TV</td>
+        <td>Free</td>
+        <td>Large playlists, recording</td>
+      </tr>
+      <tr>
+        <td>Perfect Player</td>
+        <td>Android, Android TV</td>
+        <td>Free</td>
+        <td>Multilingual, lightweight</td>
+      </tr>
+      <tr>
+        <td>VLC</td>
+        <td>All platforms</td>
+        <td>Free</td>
+        <td>Raw reliability</td>
+      </tr>
+      <tr>
+        <td>GSE Smart IPTV</td>
+        <td>iOS, Apple TV</td>
+        <td>Free / Paid</td>
+        <td>Apple ecosystem</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <h3>Are these apps legal</h3>
+      <p>Yes, they're simple video players, just like VLC. They don't provide any channels or playlists, you bring your own sources. Legality depends entirely on what you choose to watch, not on the software used to play it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is an M3U playlist</h3>
+      <p>A simple text file listing video stream addresses. Most players in this comparison accept both an M3U link and Xtream Codes credentials, which amount to the same thing but with a bit more account management on the provider's side.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I have to pay for a premium version</h3>
+      <p>No. Every app listed here has a fully functional free version. Paid tiers mainly add recording, running several playlists at once, or removing ads, none of which is essential for basic use.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need to sideload or can I install everything from an official store</h3>
+      <p>It depends on the app. TiviMate and XCIPTV require sideloading on Android TV and Fire Stick. Perfect Player, VLC, and GSE Smart IPTV are on official stores. Smarters Pro and UltraCast are as well on Android.</p>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p>The right player really comes down to how you actually use it more than any general ranking. Someone who stays on Android TV all day doesn't have the same needs as someone switching between their phone and living room several times a day, or an iOS user who has a more limited selection to begin with.</p>
+    <p>None of these apps is objectively better than the others across every criterion. The best approach is still to try two or three with your own playlist before settling on one.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Independent comparison based on real world testing on Android and Android TV. The apps mentioned do not provide any content, playlists, or subscriptions. Users remain solely responsible for the sources they import into these players.</p>
+    <p>streamnotes, 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
